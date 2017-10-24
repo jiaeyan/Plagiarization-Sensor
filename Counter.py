@@ -8,7 +8,7 @@ from collections import defaultdict
 class Counter:
     
     def __init__(self, baselen, toplen, padlen):
-        ''' This class provides all counting and incrementing methods.    
+        ''' This class provides all counting methods.    
           -n: the length of the base ngrams
           -m: the top length that user wants to increment to
           -l: the string length the user wants to wrap the file IDs and end positions of ngrams
