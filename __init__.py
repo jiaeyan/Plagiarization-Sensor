@@ -4,7 +4,7 @@ Created on July 10, 2017
 @author: jiajieyan
 '''
 from nltk.corpus import reuters
-from LongestNgramsCollector import PlagiarizationSensor
+from PlagiarizationSensor import PlagiarizationSensor
 import string
 
 def read():
