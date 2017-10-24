@@ -46,4 +46,5 @@ class Counter:
         return ngrams
                                    
     def __call__(self, args):
+        '''This function is called by Counter() instance.'''
         return self.count(*args)
