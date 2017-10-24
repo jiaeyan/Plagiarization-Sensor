@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 Created on July 10, 2017
-@author: svenyan
+@author: jiajieyan
 '''
 
 from multiprocessing import Pool
