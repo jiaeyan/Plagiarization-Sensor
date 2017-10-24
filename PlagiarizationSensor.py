@@ -8,7 +8,7 @@ from multiprocessing import Pool
 from Counter import Counter
 from Incrementor import Incrementor
 
-# This module deals with N-grams collection and displays all longest possible ngrams 
+# This module deals with N-grams collection and displays all longest possible N-grams 
 # that appear in more than 1 file. 
 
 class PlagiarizationSensor:
