@@ -22,7 +22,9 @@ class PlagiarizationSensor:
         self.incrementor = Incrementor(baselen, toplen, padlen)
         
     def get_padlen(self, data):
-        '''Get the max between len(data) and longest text to decide how many digits needed to pad doc info string.'''
+        '''Get the max between len(data) and longest text to decide how many digits needed to pad doc info string.
+           Also for that purpose, each doc is tagged with an ID.
+        '''
         print 'Calculating padlen...'
         padlen = len(str(max([len(data), max([len(words) for words in data.itervalues()])])))
         id_t = {str(ID).zfill(padlen):t for ID, t in enumerate(data, 1)}
