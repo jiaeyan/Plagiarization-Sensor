@@ -1,5 +1,6 @@
 # Plagiarization_Sensor
-A detector to find all longest repeated language segments among large volumes of texts, multiprocessing is applied.
+Based on N-grams counting, this is a detector to find all longest repeated language segments among large volumes of texts, multiprocessing is applied.
+
 The fianl result is sotred in a CSV file.
 
 ■ PlagiarizationSensor.py: the main class to utilize multiprocessing and calls on other classes.
