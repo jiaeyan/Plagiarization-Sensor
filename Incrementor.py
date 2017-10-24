@@ -5,6 +5,9 @@ Created on July 10, 2017
 '''
 from collections import defaultdict
 
+# A class to help increment the base length N-grams, both forward and backward, on the condition that these N-grams have >1 filehits.
+# Also used to eliminate duplications of successive N-grams and reduce them to the longest qualidfied ones.
+
 class Incrementor():
     
     def __init__(self, l, n, m):
@@ -29,7 +32,7 @@ class Incrementor():
         return result
     
     def grow_right(self, ngrams, result, id_w, length, step):
-        '''Grow the ngrams to the right. Reduce all short ones to the long one.
+        '''The backtracking is applied to grow the ngrams to the right. Reduce all short successive ones to the long one.
         
         If current middle length ngram has >1 file hits, add one word at the last of that ngram
         and collect all possible higher length grams grown from that ngram and go on checking; 
@@ -51,7 +54,7 @@ class Incrementor():
                     result[length - 1][lgram] += self.pad(ID, end - 1) 
     
     def build_hgrams(self, ngram, id_end, result, id_w, length, step):
-        '''Build a high length grams dict grown from one medium length.'''
+        '''Build a high length grams dict grown from one lower length.'''
         hgrams = defaultdict(str)
         for i in xrange(0, len(id_end), step):
             step_info = id_end[i:i+step]
